@@ -3,13 +3,12 @@
     
         <main role="main" class="container">
 
-               <%@page import="DAO.FiliaisDAO,model.Filiais, java.util.*"%>  
+               <%@page import="DAO.EmpresasDAO,model.Empresas, java.util.*"%>  
                <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
                 
             <%
-                
-                FiliaisDAO obj = new FiliaisDAO();
-                List<Filiais> list = obj.read();
+                EmpresasDAO obj = new EmpresasDAO();
+                List<Empresas> list = obj.read();
                 request.setAttribute("list", list);
             %>  
 
@@ -34,7 +33,7 @@
                             <td>${u.getNome()}</td>
                             <td>${u.getEndereco()}</td>
                             <td><a  class="btn btn-sm btn-warning" href="Edit.jsp?id=${u.getId()}">Editar</a></td>
-                            <td><a  class="btn btn-sm btn-danger"  href="../DeleteFilialServlet?id=${u.getId()}">Excluir</a></td>
+                            <td><a  class="btn btn-sm btn-danger"  href="../DeleteEmpresaServlet?id=${u.getId()}">Excluir</a></td>
                         </tr>
                         </c:forEach>  
                     </tbody>

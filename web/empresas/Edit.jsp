@@ -10,17 +10,17 @@
             </div>
         </div>
 
-    <%@page import="servlets.UpdateUsuarioServlet,model.Usuarios, java.util.*"%>  
+    <%@page import="servlets.empresas.UpdateEmpresaServlet,model.Empresas, java.util.*"%>  
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
     <%
         String id = request.getParameter("id");
-        Usuarios obj = new Usuarios();
+        Empresas obj = new Empresas();
         obj.setId(Integer.parseInt(id));
 
     %>
 
-    <form action="../UpdateUsuarioServlet" method="GET">
+    <form action="../UpdateEmpresaServlet" method="GET">
         <div class="form-group">
             <label for="id">id</label>
             <input type="text" value="<%=id%>" name="id" class="input-sm form-control" required>

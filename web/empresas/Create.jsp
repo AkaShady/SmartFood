@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <form method="GET">
+        <form action="../CreateEmpresaServlet" method="GET">
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" class="input-sm form-control" required>

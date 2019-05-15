@@ -10,17 +10,17 @@
             </div>
         </div>
 
-    <%@page import="servlets.UpdateUsuarioServlet,model.Usuarios, java.util.*"%>  
+    <%@page import="servlets.mesas.UpdateMesaServlet,model.Mesas, java.util.*"%>  
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
     <%
         String id = request.getParameter("id");
-        Usuarios obj = new Usuarios();
+        Mesas obj = new Mesas();
         obj.setId(Integer.parseInt(id));
 
     %>
 
-    <form action="../UpdateUsuarioServlet" method="GET">
+    <form action="../UpdateMesaServlet" method="GET">
         <div class="form-group">
             <label for="id">id</label>
             <input type="text" value="<%=id%>" name="id" class="input-sm form-control" required>
@@ -28,14 +28,17 @@
 
         <div class="form-group">
             <label for="disponibilidade">Disponibilidade</label>
-            <input type="text" name="disponibilidade" class="input-sm form-control" required>
+            <select name="disponibilidade" class="form-control" required>
+                <option value="1">Sim</option>
+                <option value="0">Nao</option>
+            </select>
         </div>
 
         <div class="form-group">
             <label for="lugares">Número de lugares</label>
-            <input type="text" name="lugares"  class="input-sm form-control" required>
+            <input type="number" name="lugares"  class="input-sm form-control" required>
         </div>
-        
+
         <div class="text-right">
             <input type="submit" value="Salvar" class="btn btn-sucess">
         </div>

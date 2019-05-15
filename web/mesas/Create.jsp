@@ -10,15 +10,19 @@
             </div>
         </div>
 
-        <form method="GET">
+        <form action="../CreateMesaServlet" method="GET">
+
             <div class="form-group">
                 <label for="disponibilidade">Disponibilidade</label>
-                <input type="text" name="disponibilidade" class="input-sm form-control" required>
+                    <select name="disponibilidade" class="form-control" required>
+                        <option value="1">Sim</option>
+                        <option value="0">Nao</option>
+                    </select>
             </div>
 
             <div class="form-group">
                 <label for="lugares">Número de lugares</label>
-                <input type="text" name="lugares"  class="input-sm form-control" required>
+                <input type="number" name="lugares"  class="input-sm form-control" required>
             </div>
 
             <div class="text-right">
