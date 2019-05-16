@@ -1,3 +1,4 @@
+
 <jsp:include page="../layout/head.html"></jsp:include>  
     <main role="main" class="container">
 
@@ -10,17 +11,17 @@
             </div>
         </div>
 
-    <%@page import="servlets.UpdateUsuarioServlet,model.Usuarios, java.util.*"%>  
+    <%@page import="servlet.cardapios.UpdateCardapioServlet,model.Cardapios, java.util.*"%>  
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
     <%
         String id = request.getParameter("id");
-        Usuarios obj = new Usuarios();
+        Cardapios obj = new Cardapios();
         obj.setId(Integer.parseInt(id));
 
     %>
 
-    <form action="../UpdateUsuarioServlet" method="GET">
+    <form action="../UpdateCardapioServlet" method="GET">
         <div class="form-group">
             <label for="id">id</label>
             <input type="text" value="<%=id%>" name="id" class="input-sm form-control" required>
